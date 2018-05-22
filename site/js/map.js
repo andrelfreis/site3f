@@ -1,8 +1,9 @@
-var map;
 function initMap() {
-	var latlng3f = new google.maps.LatLng(-23.9657103, -46.3166054);
-	map = new google.maps.Map(document.getElementById('map'), {
-    	center: latlng3f,
-        zoom: 17
-    });
+	var academia3f = new google.maps.LatLng(-23.965748, -46.316714);
+	var mapCanvas = document.getElementById("map");
+	var mapOptions = {center: academia3f, zoom: 16};
+	var map = new google.maps.Map(mapCanvas, mapOptions);
+	var image = 'img/icon3f.png';
+    var marker = new google.maps.Marker({position:academia3f, title:"3F Artes Marciais", icon: image});
+    marker.setMap(map);
 }
