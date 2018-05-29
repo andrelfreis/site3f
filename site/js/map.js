@@ -6,4 +6,14 @@ function initMap() {
 	var image = 'img/icon3f.png';
     var marker = new google.maps.Marker({position:academia3f, title:"3F Artes Marciais", icon: image});
     marker.setMap(map);
+    
+    var contentString = '<div><p class="font-weight-bold">3F Artes Marciais</p><p>Av. Pedro Lessa, 2797 - Sala 11</p><p>Tel.: (13) 3366-0549</p></div>';
+
+	var infowindow = new google.maps.InfoWindow({
+		content: contentString
+	});
+
+	marker.addListener('click', function() {
+    	infowindow.open(map, marker);
+  	});
 }
